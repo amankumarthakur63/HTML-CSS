@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid VS Flexbox</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            font-family: sans-serif;
+            margin: 0;
+            display: grid;
+            grid-template-columns: 30% auto;
+        }
+        header,
+        aside,
+        main,
+        footer{
+            padding: 16px;
+            text-align: center;
+        }
+        header{
+            background-color: #e19ded;
+            grid-template-rows: 60px;
+        }  
+        aside{
+            background-color: #e35c8b;
+            grid-template-rows: auto;
+        }  
+        footer{
+            background-color: black;
+            grid-auto-rows: 60px;
+        }
+        .navigation-list{
+            list-style: none;
+            margin: 0; 
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .navigation-item{
+            margin: 0 10px 10px;
+        }
+        .navigation-item a{
+            text-decoration: none;
+            color: white;
+        }
+        .navigation-item a:hover,
+        .navigation-item a:active{
+            color: #fa923f;
+        }
+                
+    </style>
+</head>
+<body>
+    <header>
+        <ul class="navigation-list">
+            <li class="navigation-item"><a href="#">Home</a></li>
+            <li class="navigation-item"><a href="#">About</a></li>
+            <li class="navigation-item"><a href="#">Contact</a></li>
+            <li class="navigation-item"><a href="#">Help</a></li>
+        </ul>
+    </header>
+    <aside>
+        <p>This is the sidebar</p>
+    </aside>
+    <main>
+        <h1>CSS Grid VS Flexbox</h1>
+        <p>which one is use</p>
+    </main>
+    <footer>
+        <ul class="navigation-list">
+            <li class="navigation-item"><a href="#">Terms of use</a></li>
+            <li class="navigation-item"><a href="#">Careers</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
