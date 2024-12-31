@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Ano=imation</title>
+    <style>
+        body{
+            margin: 20px;
+            padding: 20px;
+        }
+        .box{
+            height: 200px;
+            width: 200px;
+            background-color: #ef64e9;
+            transition-duration: 2s;
+            transition-property: background;
+            /* transition-timing-function: ease; */
+            transition-delay: 2s;
+        }
+        .box:hover{
+            background-color: #40ed28;
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
