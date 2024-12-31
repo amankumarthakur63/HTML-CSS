@@ -4,8 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Hover Effect</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background: #28231f;
+        }
+        .middle{
+            position: absolute;
+            top: 50%; 
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .btn{
+            position: relative;
+            display: block;
+            color: white;
+            font-size: 25px;
+            font-family: "montserrat";
+            text-orientation: none;
+            margin: 30px 0;
+            border: 2px solid #5ee741;
+            padding: 14px 60px;
+            text-transform: uppercase;
+            overflow: hidden;
+            transition: 1s all ease;
+        }
+        .btn::before{
+            background-color: #dcd159;
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            z-index: -1;
+            transition: all 0.6s ease;
+        }
+        .btn1::before{
+            width: 0;
+            height: 100%;
+        }
+        .btn1:hover::before{
+            width: 100%;
+        }
+        .btn2::before{
+            width: 100%;
+            height: 0;
+        }
+        .btn2:hover::before{
+            height: 100%;
+        }
+        .btn3::before{
+            width: 100%;
+            height: 0;
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+        .btn3:hover::before{
+            height: 280%;
+        }
+        .btn4{
+            color: #fff;
+        }
+        .btn4:hover{
+            color: red;
+        }
+        .btn4::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 200%;
+            height: 0%;
+            background-color: #dcd159;
+            z-index: -1;
+            transition: 0.8s;
+        }
+        .btn4::before{
+            bottom: 0;
+            border-radius: 50% 50% 0 0;
+        }
+        .btn4::before{
+            height: 180%;
+        }
+        .btn4:hover::before{
+            height: 0%;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="middle">
+        <a href="" class="btn btn1">Hover Me</a>
+        <a href="" class="btn btn2">Hover Me</a>
+        <a href="" class="btn btn3">Hover Me</a>
+        <a href="" class="btn btn4">Hover Me</a>
+    </div>
 </body>
 </html>
